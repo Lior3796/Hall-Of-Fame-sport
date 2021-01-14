@@ -1,0 +1,127 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-image: url("https://images.pexels.com/photos/3429857/pexels-photo-3429857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); */
+    /* background-image: linear-gradient(25deg, rgb(243, 207, 4), rgb(114, 84, 0)); */
+    background-image: linear-gradient( orange, rgba(0, 0, 0, 0.856));
+    height: 100%;
+    width: 100vw;
+    font-family: 'Cormorant Garamond';
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 'header header header header header' 'nav nav nav nav nav' 'aside aside aside aside aside' 'main main main main main' 'main main main main main' 'footer footer footer footer footer';
+    height: 100vh;
+    width: 100vw;
+}
+
+.header1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;
+    background-image: linear-gradient(25deg, rgb(243, 207, 4), rgb(201, 147, 0));
+    height: 100%;
+}
+
+.header1 h1 {
+    font-size: 55px;
+}
+
+.nav1 {
+    grid-area: nav;
+    background-image: linear-gradient(25deg, rgb(68, 0, 0), rgb(0, 0, 0));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+}
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    position: relative;
+}
+
+.dropdown .mainUl {
+    width: 200px;
+    margin-top: 30px;
+    list-style: none;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    position: absolute;
+    top: 0px;
+    transform: translateY(60px);
+    border-radius: 20px;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 20px;
+}
+
+.dropdown .mainUl li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(252, 252, 15);
+    border: black 1px solid;
+    border: 5px;
+    transition: all 0.4 ease;
+}
+
+.dropdown button {
+    background: none;
+    border: none;
+    color: rgb(255, 217, 0);
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.dropdown .mainUl li:hover {
+    background-color: rgb(214, 189, 106);
+    cursor: pointer;
+}
+
+.dropdown .mainUl li a {
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown button:focus+ul {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0px);
+}
+
+.aside1 {
+    grid-area: aside;
+}
+
+.main1 {
+    grid-area: main;
+    height: 100vh;
+    width: 100%;
+    /* background-repeat: repeat-x; */
+    /* margin: auto; */
+}
+
+.menu1 {
+    grid-area: menu;
+}
+
+.footer1 {
+    grid-area: footer;
+}
