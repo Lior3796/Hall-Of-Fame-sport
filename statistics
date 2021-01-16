@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+
+    <title> Statictics</title>
+</head>
+
+<body>
+    <nav class="nav1">item1</nav>
+    <header class="header1">item1</header>
+    <main class="main1">item1 </main>
+    <menu class="menu1"> item1 </menu>
+    <aside class="aside1"> item1</aside>
+    <footer class="footer1"> item1</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,192 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(25deg, rgb(68, 0, 0), rgb(0, 0, 0));
+    background-repeat: repeat-y;
+    height: 100%;
+    width: 100vw;
+    font-family: 'assistant';
+}
+
+.contaier {
+    display: grid;
+    grid-template-areas: 'nav nav nav nav' 'header header header header' 'aside aside aside aside' 'menu section section section ' 'menu section section section ' 'footer footer footer footer ';
+    height: 100vh;
+    width: 100vw;
+    filter: drop-shadow(8px, 8px, 10px, black);
+}
+
+.nav1 {
+    grid-area: nav;
+    background-image: linear-gradient(25deg, rgb(68, 0, 0), rgb(0, 0, 0));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+}
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    position: relative;
+}
+
+.dropdown .mainUl {
+    width: 200px;
+    margin-top: 30px;
+    list-style: none;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    position: absolute;
+    top: 0px;
+    transform: translateY(60px);
+    border-radius: 20px;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 20px;
+}
+
+.dropdown .mainUl li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: none;
+    border: black 1px solid;
+    border: 5px;
+    transition: all 0.4 ease;
+}
+
+.dropdown button {
+    background: none;
+    border: none;
+    color: rgb(255, 217, 0);
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.dropdown .mainUl li:hover {
+    background-color: rgb(214, 189, 106);
+    cursor: pointer;
+}
+
+.dropdown .mainUl li a {
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown button:focus+ul {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0px);
+}
+
+.header1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;
+    height: 50vh;
+    width: 100vw;
+    background-color: black;
+}
+
+.header1 h1 {
+    font-size: 300px;
+    height: 200%;
+    width: 100%;
+}
+
+.header1 div {
+    animation: background1 12s linear 0s infinite forwards alternate;
+    background-position: center center;
+    background-size: cover;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-family: 'Raleway', sans-serif;
+}
+
+@keyframes background1 {
+    0% {
+        background-image: url(https://media1.tenor.com/images/e4a9e922db54219303e795aa6ae9e9ca/tenor.gif?itemid=16607264);
+    }
+    45% {
+        background-image: url(https://media1.tenor.com/images/b9ac7fb189148beeeaf5c4dcb83aab31/tenor.gif?itemid=10417129);
+    }
+    70% {
+        background-image: url(https://media0.giphy.com/media/SWd2sOr0dJqkDwWu8h/200.gif);
+    }
+    100% {
+        background-image: url(https://i.makeagif.com/media/5-23-2015/d-qvVV.gif);
+    }
+}
+
+img {
+    width: 100%;
+    height: 70vh;
+}
+
+.section1 {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    border: green 1px solid;
+    height: 70vh;
+    width: 80%;
+    margin: auto;
+    transition: all 3s 0s;
+    filter: blur(3px);
+    margin-top: 100px;
+}
+
+.section1:hover {
+    transform: translateX(-140px);
+    filter: blur(0px);
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    color: gold;
+}
+
+button {
+    background-color: none;
+    font-size: 100%;
+    font-family: inherit;
+    text-decoration: none;
+    text-align: center;
+}
+
+.section1 p {
+    flex: 1;
+    font-size: 150%;
+    width: 40%;
+}
+
+
+/* .section1:hover p {
+    opacity: 1;
+} */
+
+.section1 img {
+    flex: 1;
+    width: 40%;
+}
