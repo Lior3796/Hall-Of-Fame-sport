@@ -14,24 +14,23 @@ body {
 
 .container {
     display: grid;
-    grid-template-areas: 'nav nav nav nav ' 'header header header header' 'aside aside aside aside ' 'main main main main ' 'main main main main ' 'footer footer footer footer ';
+    grid-template-areas: 'nav nav nav nav ' 'header header header header' 'menu menu menu menu' 'aside aside aside aside' 'article1 main main article2' 'footer footer footer footer ';
     height: 100vh;
     width: 100vw;
+    grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .header1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* flex-flow: column wrap; */
     grid-area: header;
-    height: 50vh;
-    width: 100vw;
     background-color: black;
 }
 
 .header1 h1 {
-    font-size: 300px;
+    font-size: 1500%;
     height: 200%;
     width: 100%;
 }
@@ -41,9 +40,6 @@ body {
     background-position: center center;
     background-size: cover;
     background-size: 100%;
-    /* height: 100%;
-    width: 100%; */
-    /* font-size: 250%; */
     display: flex;
     justify-content: center;
     align-content: center;
@@ -71,16 +67,15 @@ body {
     grid-area: nav;
     background-image: linear-gradient(25deg, rgb(68, 0, 0), rgb(0, 0, 0));
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    width: 100%;
     height: 10vh;
 }
 
 .dropdown {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 50%;
     position: relative;
 }
@@ -109,7 +104,6 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
-    background-color: rgb(252, 252, 15);
     border: black 1px solid;
     border: 5px;
     transition: all 0.4 ease;
@@ -122,6 +116,15 @@ body {
     text-decoration: none;
     font-size: 18px;
     cursor: pointer;
+}
+
+.dropdown button a {
+    text-decoration: none;
+    color: gold;
+}
+
+.dropdown button a:visited {
+    color: none;
 }
 
 .dropdown .mainUl li:hover {
@@ -142,8 +145,6 @@ body {
 
 .main1 {
     grid-area: main;
-    height: 100vh;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -159,13 +160,13 @@ img {
 }
 
 .athletes {
-    width: 20%;
-    height: 40%;
+    width: 25%;
+    height: 22%;
     border-radius: 20px;
     margin: 2%;
     box-shadow: 0px 0px gray;
     background-image: radial-gradient(rgb(0, 195, 255), white);
-    padding-bottom: 6%;
+    padding-bottom: 15%;
 }
 
 #Pele,
@@ -196,7 +197,7 @@ img {
 
 .athletes p {
     color: black;
-    font-size: 250%;
+    font-size: 200%;
     font-family: 'Rye', cursive;
     text-align: center;
 }
@@ -212,9 +213,6 @@ img {
     display: flex;
     align-content: center;
     flex-flow: row;
-    height: 70vh;
-    width: 100vw;
-    background-color: black;
     background-size: cover;
     opacity: 0.6;
 }
@@ -239,34 +237,155 @@ img {
 
 .menu1 {
     grid-area: menu;
-    height: 30vh;
-    width: 100%;
 }
 
 .footer1 {
     grid-area: footer;
-    height: 5vh;
-    width: 100%;
-}
-
-.footer1 ul {
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-    flex-direction: row;
-    list-style: none;
-    height: fit-content;
-    width: 100%;
-}
-
-.footer1 ul li {
     display: flex;
     justify-content: center;
-    align-content: center;
-    font-size: 200%;
+    align-items: center;
+    height: 5vh;
+    text-align: center;
 }
 
-.footer1 ul li a {
-    text-decoration: none;
+.footer1 div {
+    background-color: black;
+    display: flex;
     width: 100%;
+    flex-flow: row;
+    color: gold;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer1 div h1 {
+    list-style: none;
+    text-decoration: none;
+    font-size: 300%;
+    color: gold;
+}
+
+.menu1 {
+    grid-area: menu;
+    margin: auto;
+    background-color: black;
+    margin-bottom: 5%;
+    height: 100%;
+    width: 100%;
+}
+
+.menu1 div {
+    /* background-image: radial-gradient(gray, white); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 250%;
+    border-radius: 10px;
+    background-color: black;
+    width: 80vw;
+    margin: auto;
+}
+
+.menu1 div p {
+    font-family: 'Assistant', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color: gold;
+}
+
+article {
+    grid-area: article1;
+    background-color: black;
+    opacity: 0.6;
+    display: flex;
+}
+
+article ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: column;
+    list-style: none;
+}
+
+.badge {
+    width: 77%;
+}
+
+article ul li {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: column;
+}
+
+.article2 {
+    grid-area: article2;
+}
+
+@media (min-width:324px) and (max-width:650px) {
+    body {
+        font-size: 50%;
+    }
+    .nav1 {
+        grid-area: nav;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+    }
+    .nav1 button {
+        font-size: 200%;
+    }
+    .header1 h1 {
+        grid-area: header;
+        font-size: 800%;
+    }
+    .menu1 p {
+        font-size: 50%;
+    }
+    .athletes {
+        font-size: 90%;
+        box-shadow: 10px 10px 10px black;
+        padding-bottom: 15%;
+        border-radius: 0px;
+    }
+    .aside1 p {
+        font-size: 150%;
+    }
+    .aside1 img {
+        width: 70%;
+        height: 70%;
+    }
+    .aside1 div {
+        background-position: center top;
+    }
+}
+
+@media (max-width:800px) {
+    .athletes {
+        font-size: 50%;
+        padding-bottom: 15%;
+    }
+}
+
+@media (min-width:650px) and (max-width:900px) {
+    .header1 h1 {
+        font-size: 1000%;
+    }
+    .menu1 p {
+        font-size: 70%;
+    }
+    body {
+        font-size: 70%;
+    }
+    .athletes {
+        font-size: 90%;
+        box-shadow: 10px 10px 10px black;
+        padding-bottom: 15%;
+    }
+}
+
+@media (min-width:901px) and (max-width:1167px) {
+    .header1 h1 {
+        font-size: 1100%;
+    }
 }
